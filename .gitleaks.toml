@@ -1,0 +1,4 @@
+[extend]
+useDefault = true
+
+# Garmin-specific rule goes here after the first probe reveals the key shape (plan 07).
