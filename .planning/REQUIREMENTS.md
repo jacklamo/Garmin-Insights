@@ -13,8 +13,8 @@
 
 ### Garmin Capability Probe
 
-- [ ] **PRB-01**: User can run a CLI probe that authenticates with the personal key and refreshes the 24h token
-- [ ] **PRB-02**: Probe records per-endpoint status, data shape, granularity, rate-limit headers, and history depth for the vivoactive 5
+- [x] **PRB-01**: User can run a CLI probe that authenticates with the personal key and refreshes the 24h token
+- [x] **PRB-02**: Probe records per-endpoint status, data shape, granularity, rate-limit headers, and history depth for the vivoactive 5
 - [x] **PRB-03**: A static page tests auth and one data call from a real browser origin (including iPhone Safari) and records the CORS verdict
 - [ ] **PRB-04**: `docs/garmin-capabilities.md` records findings, a proxy go/no-go verdict, and the shared-origin risk of the default GitHub Pages origin
 - [ ] **PRB-05**: Scrubbed recorded API responses are saved as test fixtures
@@ -133,8 +133,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FND-01 | Phase 1 | Complete |
 | FND-02 | Phase 1 | Complete |
 | FND-03 | Phase 1 | Complete |
-| PRB-01 | Phase 1 | Pending |
-| PRB-02 | Phase 1 | Pending |
+| PRB-01 | Phase 1 | Complete |
+| PRB-02 | Phase 1 | Complete |
 | PRB-03 | Phase 1 | Complete |
 | PRB-04 | Phase 1 | Pending |
 | PRB-05 | Phase 1 | Pending |
