@@ -75,6 +75,8 @@ Show me, in plain language with sample sizes and confidence, what my logged beha
 | Event-count-only logging for nicotine/marijuana | Fast logging; user choice | — Pending |
 | Phase 0 capability probe first | Garmin API granularity and CORS gate the design | — Pending |
 | No at-rest encryption of substance/health log tables in v1 (Garmin key is still passphrase-encrypted) | Ciphertext can't be indexed/queried; device passcode is sufficient per user; encrypted export covers backups | — Pending |
+| Keep default GitHub Pages origin (`user.github.io/repo`); Phase 0 records the shared-origin risk | User choice; mitigations: no third-party scripts, strict CSP, memory-only key; changing origin later strands IndexedDB data | — Pending |
+| Early minimal logging page (check-in, quick-log) right after ingest, before baselines/engine | Labels cannot be backfilled; starts the n-of-1 clock | — Pending |
 | Check-in ships early | Subjective labels cannot be backfilled | — Pending |
 
 ---
