@@ -130,12 +130,68 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (filled by roadmapper) | | |
+| FND-01 | Phase 1 | Pending |
+| FND-02 | Phase 1 | Pending |
+| FND-03 | Phase 1 | Pending |
+| PRB-01 | Phase 1 | Pending |
+| PRB-02 | Phase 1 | Pending |
+| PRB-03 | Phase 1 | Pending |
+| PRB-04 | Phase 1 | Pending |
+| PRB-05 | Phase 1 | Pending |
+| ING-01 | Phase 2 | Pending |
+| ING-02 | Phase 2 | Pending |
+| ING-03 | Phase 2 | Pending |
+| ING-04 | Phase 2 | Pending |
+| ING-05 | Phase 2 | Pending |
+| ING-06 | Phase 2 | Pending |
+| STO-01 | Phase 2 | Pending |
+| STO-02 | Phase 2 | Pending |
+| STO-03 | Phase 2 | Pending |
+| LOG-01 | Phase 3 | Pending |
+| LOG-02 | Phase 3 | Pending |
+| LOG-03 | Phase 3 | Pending |
+| LOG-04 | Phase 3 | Pending |
+| LOG-05 | Phase 3 | Pending |
+| LOG-06 | Phase 3 | Pending |
+| LOG-07 | Phase 3 | Pending |
+| LOG-08 | Phase 3 | Pending |
+| STO-04 | Phase 3 | Pending |
+| STO-05 | Phase 3 | Pending |
+| BAS-01 | Phase 4 | Pending |
+| BAS-02 | Phase 4 | Pending |
+| BAS-03 | Phase 4 | Pending |
+| BAS-04 | Phase 4 | Pending |
+| BAS-05 | Phase 4 | Pending |
+| ENG-01 | Phase 5 | Pending |
+| ENG-02 | Phase 5 | Pending |
+| ENG-03 | Phase 5 | Pending |
+| ENG-04 | Phase 5 | Pending |
+| ENG-05 | Phase 5 | Pending |
+| ENG-06 | Phase 5 | Pending |
+| ENG-07 | Phase 5 | Pending |
+| ENG-08 | Phase 5 | Pending |
+| ENG-09 | Phase 5 | Pending |
+| DOC-01 | Phase 5 | Pending |
+| EXP-01 | Phase 6 | Pending |
+| EXP-02 | Phase 6 | Pending |
+| EXP-03 | Phase 6 | Pending |
+| EXP-04 | Phase 6 | Pending |
+| EXP-05 | Phase 6 | Pending |
+| UI-01 | Phase 7 | Pending |
+| UI-02 | Phase 7 | Pending |
+| UI-03 | Phase 7 | Pending |
+| UI-04 | Phase 7 | Pending |
+| UI-05 | Phase 7 | Pending |
+| UI-06 | Phase 7 | Pending |
+| UI-07 | Phase 7 | Pending |
+| UI-08 | Phase 7 | Pending |
+| UI-09 | Phase 7 | Pending |
+| DOC-02 | Phase 8 | Pending |
 
 **Coverage:**
 - v1 requirements: 57 total
-- Mapped to phases: 0
-- Unmapped: 57 ⚠️
+- Mapped to phases: 57
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-10-28*
