@@ -13,9 +13,11 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "prepare": "husky",
-    "verify-hook": "vitest run tools/hook.test.ts"
+    "verify-hook": "vitest run tools/hook.test.ts",
+    "check:boundaries": "depcruise packages apps --config .dependency-cruiser.cjs"
   },
   "devDependencies": {
+    "@swc/core": "1.16.20",
     "@types/node": "26.6.5",
     "dependency-cruiser": "18.7.0",
     "husky": "9.1.7",
