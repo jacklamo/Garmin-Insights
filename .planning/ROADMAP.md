@@ -27,7 +27,16 @@ Insights starts by proving what the Garmin Personal API actually delivers (and w
   3. `docs/garmin-capabilities.md` lists, per endpoint, data shape, granularity, rate-limit headers and history depth for the vivoactive 5
   4. A static page opened in desktop and iPhone Safari reports whether a browser-origin call to Garmin succeeds, and the doc states the proxy go/no-go and shared-origin risk
   5. Scrubbed recorded responses exist as fixtures, and an import-boundary check fails if a package imports against the one-way order
-**Plans**: TBD
+**Plans**: 7 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Root workspace, gitignore, gitleaks pre-commit hook (tested), CI
+- [ ] 01-02-PLAN.md — Package stubs and dependency-cruiser boundary check with self-test
+- [ ] 01-03-PLAN.md — garmin-client: auth, classification, endpoint table
+- [ ] 01-04-PLAN.md — Static CORS test page and Pages workflow
+- [ ] 01-05-PLAN.md — CLI probe (politeness controls, depth search, report skeleton)
+- [ ] 01-06-PLAN.md — Scrub script and leak scan for fixtures
+- [ ] 01-07-PLAN.md — Live probe, browser matrix, capabilities doc, fixtures (checkpoints)
 
 ### Phase 2: Store, Ingest, and Backup
 **Goal**: User can pull Garmin history into a local store repeatedly without duplicates, and can export, import and delete everything
