@@ -9,7 +9,7 @@
 
 - [x] **FND-01**: Repo has .gitignore, pre-commit secret scan, and CI (tests + gitleaks) before any real Garmin key is used
 - [x] **FND-02**: Garmin key and access tokens never appear in source, logs, fixtures, repo, or deployed site
-- [ ] **FND-03**: Monorepo with enforced one-way package boundaries (core, garmin-client, ingest, store, engine, apps)
+- [x] **FND-03**: Monorepo with enforced one-way package boundaries (core, garmin-client, ingest, store, engine, apps)
 
 ### Garmin Capability Probe
 
@@ -132,7 +132,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | FND-01 | Phase 1 | Complete |
 | FND-02 | Phase 1 | Complete |
-| FND-03 | Phase 1 | Pending |
+| FND-03 | Phase 1 | Complete |
 | PRB-01 | Phase 1 | Pending |
 | PRB-02 | Phase 1 | Pending |
 | PRB-03 | Phase 1 | Pending |
