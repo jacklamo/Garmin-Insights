@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { loadConfig } from './config.js';
+import { REPO_ROOT, loadConfig } from './config.js';
+import { scrub } from './scrub.js';
 import { preflight, runProbe } from './probe.js';
 import { formatTable, renderSkeleton } from './report.js';
 
@@ -20,8 +21,12 @@ async function main(argv: string[]): Promise<void> {
     process.stdout.write(formatTable(r.findings) + `\nrun folder: ${dir}\n`);
   } else if (cmd === 'report' && arg) {
     process.stdout.write(renderSkeleton(arg));
+  } else if (cmd === 'scrub' && arg) {
+    const cfg = loadConfig();
+    scrub(arg, path.join(REPO_ROOT, 'fixtures', 'garmin'), { secrets: [cfg.key] });
+    process.stdout.write('scrub complete; leak scan passed\n');
   } else {
-    process.stderr.write('usage: main.ts probe | report <runDir>\n');
+    process.stderr.write('usage: main.ts probe | report <runDir> | scrub <runDir>\n');
     process.exitCode = 1;
   }
 }

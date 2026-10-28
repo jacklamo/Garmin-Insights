@@ -14,6 +14,7 @@
     "typecheck": "tsc --noEmit",
     "prepare": "husky",
     "verify-hook": "vitest run tools/hook.test.ts",
+    "fixtures:scan": "gitleaks dir fixtures --no-banner --redact",
     "check:boundaries": "depcruise packages apps --config .dependency-cruiser.cjs"
   },
   "devDependencies": {
