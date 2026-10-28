@@ -13,6 +13,7 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "prepare": "husky",
+    "check:doc": "node tools/check-doc.mjs",
     "verify-hook": "vitest run tools/hook.test.ts",
     "fixtures:scan": "gitleaks dir fixtures --no-banner --redact",
     "check:boundaries": "depcruise packages apps --config .dependency-cruiser.cjs"
