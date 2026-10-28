@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { fetchToken, tokenExpiry, get } from './auth';
-import { GarminHttpError } from './errors';
+import { fetchToken, tokenExpiry, get } from './auth.js';
+import { GarminHttpError } from './errors.js';
 
 const key = 'k' + Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
 const stub = (status: number, body: string) => (async () => new Response(body, { status })) as unknown as typeof fetch;
@@ -13,7 +13,7 @@ describe('fetchToken', () => {
     expect(await fetchToken(key, stub(200, '"a.b.c"'))).toBe('a.b.c');
   });
   it('401 error leaks nothing', async () => {
-    const err = await fetchToken(key, stub(401, 'nope')).catch((e) => e);
+    const err = await fetchToken(key, stub(401, 'nope')).catch((e: any) => e);
     expect(err).toBeInstanceOf(GarminHttpError);
     for (const s of [String(err), err.message, JSON.stringify(err)]) {
       expect(s).not.toContain(key);
@@ -22,11 +22,11 @@ describe('fetchToken', () => {
   });
   it('sanitizes rejected fetch', async () => {
     const bad = (async () => { throw new Error(`boom Authorization: ApiKey ${key} https://x?token=zzz`); }) as unknown as typeof fetch;
-    const err = await fetchToken(key, bad).catch((e) => e);
+    const err = await fetchToken(key, bad).catch((e: any) => e);
     expect(err).toBeInstanceOf(GarminHttpError);
     expect(err.status).toBe(0);
     expect(String(err) + JSON.stringify(err)).not.toMatch(new RegExp(`${key}|ApiKey|zzz`));
-    const err2 = await get('tok' + key, '/x?y=1', bad).catch((e) => e);
+    const err2 = await get('tok' + key, '/x?y=1', bad).catch((e: any) => e);
     expect(String(err2)).not.toContain(key);
   });
 });

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { ENDPOINTS, buildPath } from './endpoints';
+import { ENDPOINTS, buildPath } from './endpoints.js';
 
 describe('endpoints', () => {
   it('has 24 defs that build clean paths', () => {

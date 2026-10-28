@@ -1,4 +1,4 @@
-import { GarminHttpError } from './errors';
+import { GarminHttpError } from './errors.js';
 
 export const BASE = 'https://personal.connectapi.garmin.com';
 export const TOKEN_PATH = '/personalapitoken-service/personal-api/personal-api-key/token';
