@@ -74,6 +74,7 @@ Show me, in plain language with sample sizes and confidence, what my logged beha
 | Templates, not LLM, for insight text | Privacy, determinism | — Pending |
 | Event-count-only logging for nicotine/marijuana | Fast logging; user choice | — Pending |
 | Phase 0 capability probe first | Garmin API granularity and CORS gate the design | — Pending |
+| No at-rest encryption of substance/health log tables in v1 (Garmin key is still passphrase-encrypted) | Ciphertext can't be indexed/queried; device passcode is sufficient per user; encrypted export covers backups | — Pending |
 | Check-in ships early | Subjective labels cannot be backfilled | — Pending |
 
 ---
