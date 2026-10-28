@@ -1,0 +1,11 @@
+{
+  "name": "@insights/cli",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "cli:probe": "tsx src/main.ts probe",
+    "cli:report": "tsx src/main.ts report"
+  },
+  "dependencies": { "@insights/garmin-client": "*" }
+}
