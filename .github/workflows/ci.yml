@@ -12,6 +12,16 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           node-version: 24
+      - name: Install gitleaks (checksum verified; tests shell out to it)
+        run: |
+          V=8.30.1
+          BASE=https://github.com/gitleaks/gitleaks/releases/download/v$V
+          D=$RUNNER_TEMP/gitleaks-bin; mkdir -p $D; cd $D
+          curl -sSfLO $BASE/gitleaks_${V}_linux_x64.tar.gz
+          curl -sSfLO $BASE/gitleaks_${V}_checksums.txt
+          grep "gitleaks_${V}_linux_x64.tar.gz" gitleaks_${V}_checksums.txt | sha256sum -c -
+          tar xzf gitleaks_${V}_linux_x64.tar.gz gitleaks
+          echo $D >> $GITHUB_PATH
       - run: npm ci
       - run: npm run typecheck
       - run: npm test

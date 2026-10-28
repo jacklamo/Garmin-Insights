@@ -1,6 +1,6 @@
 import { spawnSync } from "node:child_process";
 import { randomBytes } from "node:crypto";
-import { copyFileSync, mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
+import { chmodSync, copyFileSync, mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { delimiter, join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -12,6 +12,7 @@ function makeRepo() {
   const hooks = join(dir, "hooks");
   mkdirSync(hooks);
   copyFileSync(join(root, ".husky/pre-commit"), join(hooks, "pre-commit"));
+  chmodSync(join(hooks, "pre-commit"), 0o755); // git skips non-executable hooks (Linux checkout of a Windows-committed file)
   copyFileSync(join(root, ".gitleaks.toml"), join(dir, ".gitleaks.toml"));
   const git = (args: string[], env = process.env) =>
     spawnSync("git", args, { cwd: dir, env, encoding: "utf8" });
