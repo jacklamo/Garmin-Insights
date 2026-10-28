@@ -17,7 +17,7 @@
 - [x] **PRB-02**: Probe records per-endpoint status, data shape, granularity, rate-limit headers, and history depth for the vivoactive 5
 - [x] **PRB-03**: A static page tests auth and one data call from a real browser origin (including iPhone Safari) and records the CORS verdict
 - [ ] **PRB-04**: `docs/garmin-capabilities.md` records findings, a proxy go/no-go verdict, and the shared-origin risk of the default GitHub Pages origin
-- [ ] **PRB-05**: Scrubbed recorded API responses are saved as test fixtures
+- [x] **PRB-05**: Scrubbed recorded API responses are saved as test fixtures
 
 ### Garmin Ingest
 
@@ -137,7 +137,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PRB-02 | Phase 1 | Complete |
 | PRB-03 | Phase 1 | Complete |
 | PRB-04 | Phase 1 | Pending |
-| PRB-05 | Phase 1 | Pending |
+| PRB-05 | Phase 1 | Complete |
 | ING-01 | Phase 2 | Pending |
 | ING-02 | Phase 2 | Pending |
 | ING-03 | Phase 2 | Pending |
